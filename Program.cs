@@ -17,16 +17,16 @@ namespace FolderConverter
 				return;
 			}
 
-			string inputFile = args[0];
-			string outputFile = args[1];
+			//string inputFile = args[0];
+			//string outputFile = args[1];
 
-			if (!File.Exists(inputFile))
-			{
-				Console.WriteLine("FolderConverter [input file] [output file(bat)]");
-				return;
-			}
+			//if (!File.Exists(inputFile))
+			//{
+			//	Console.WriteLine("FolderConverter [input file] [output file(bat)]");
+			//	return;
+			//}
 
-			StreamWriter sw = File.CreateText(outputFile);
+			St	reamWriter sw = File.CreateText(outputFile);
 
 			string[] lines = File.ReadAllLines(inputFile);
 			IEnumerable<string> revLines = lines.Reverse();
