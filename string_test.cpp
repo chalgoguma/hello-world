@@ -45,8 +45,7 @@ bool isRightsideGE(const std::string& left, const std::string& right)
 int main()
 {
 	std::string ver1 = "1.0.0";
-	std::string ver2 = "1.0.0";
-
+	
 	isRightsideGE(ver1, ver2);
 
 	// stringstream test...
