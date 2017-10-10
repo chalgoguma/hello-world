@@ -31,12 +31,6 @@ bool isRightsideGE(const std::string& left, const std::string& right)
 
 			existVer = true;
 		}
-
-		if (!existVer)
-			break;
-
-		if (leftVer != rightVer)
-			return leftVer < rightVer;
 	}
 
 	return true;
