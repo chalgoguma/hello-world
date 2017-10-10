@@ -30,26 +30,6 @@ namespace FolderConverter
 
 			string[] lines = File.ReadAllLines(inputFile);
 			IEnumerable<string> revLines = lines.Reverse();
-			foreach (string line in revLines)
-			{
-				Console.WriteLine(line);
-
-				string sourceKey = "이동: D:\\eTorrent 15-08-11\\";
-				string tragetKey = "-> D:\\eTorrent 15-08-11\\";
-
-				string source, target;
-
-				int pos = line.IndexOf(sourceKey);
-				int sourceStartPos = pos + sourceKey.Length;
-				int sourceEndPos = line.IndexOf(" -> ");
-				source = line.Substring(sourceStartPos, sourceEndPos - sourceStartPos);
-
-				pos = line.IndexOf(tragetKey);
-				int targetStartPos = pos + tragetKey.Length;
-				target = line.Substring(targetStartPos);
-
-				sw.WriteLine("ren " + "\"" + target + "\" \"" + source + "\"");
-			}
 
 			sw.Close();
 		}
